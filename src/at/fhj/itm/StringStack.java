@@ -16,13 +16,18 @@ public class StringStack implements Stack {
 
 	private int stackMax = 10; //begrenzt Anzahl der Elemente in Liste/im Stack auf 10.
 
-	//zeigt an, ob Stack leer ist
+	
+	/**
+	 *@return gibt aus, ob der Stack leer ist
+	 */
 	@Override
 	public boolean isEmpty() {
 		return stack.isEmpty();
 	}
 
-	//wenn Platz in Stack ist, wird ein Element hinzugefügt
+	/**
+	 * Element wird in Stack hinzugefügt, falls Platz frei ist.
+	 */
 	@Override
 	public void push(String item) {
 		if(stack.size() < stackMax){
@@ -32,7 +37,9 @@ public class StringStack implements Stack {
 		}
 	}
 
-	//löscht oberstes Element aus Stack
+	/**
+	 * löscht oberstes Element aus Stack
+	 */
 	@Override
 	public String pop() {
 		if(stack.isEmpty() == false){
